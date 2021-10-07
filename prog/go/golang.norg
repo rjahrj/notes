@@ -1,0 +1,16 @@
+@document.meta
+  title: index
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-26
+  version: 0.1
+@end
+
+* Intro
+  This is my journey into the world of Golang
+
+* Basic Notes
+ ** [Filenames, Keywords, Indentifiers, Structure](:basics:*Intro)
+ ** [Packages](:packages:*Packages)
+ ** 

@@ -1,0 +1,59 @@
+@document.meta
+  title: functions
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-28
+  version: 0.1
+@end
+
+* Intro
+  - These are my notes on functions, being as functions are a big part of Go
+  this may only be an introduction, or maybe I will just keep coming back and adding more
+  onto this file
+
+* Functions
+  - `func funcName()` is the simplest function declaration format
+  - The () are mandatory and can contain 0 or more parameters(separated by ,)
+  ~~ The type must be given afterwords to the parameters
+
+ ** The `main` function is a required starting point.
+   - No main will result in `undefined: main.main`
+   - The `main` func has no parameters and no return type; `func main must have no arguments and no return values`
+   - The first function to run is the `main.main()` and the programsexits after `main.main()` is returned
+
+ ** The body of a function is enclosed in {}
+    - The opening { *must* be on the same line of declaration or you get 
+    -- `syntax error: unexpected semicolon or newline before { )
+    - The closing } comes after the function body
+    - Here are some examples
+    @code go
+    func func_name(param1 type1, p2 t2, ...){
+      ...
+    }
+    
+    // If the function is returning an object then you must specify type
+    func func_name(p1 t1, p2 t2, ..) type1 {
+      ...
+    }
+    
+    // Or you can specify the variable as well
+    func func_Name(p1 t1, p2 t2, ...) (return1 t1, r2 t2, ...)
+      ...
+    }
+    
+    // Smaller functions can be written on one line
+    func Sum(a, b int) int { return a + b } 
+    @end
+===
+
+* Hello World Example
+  @code go
+  package main // Making package for standalone executable
+  
+  import "fmt" // Importing a package
+  
+  func main() { //Entry point for app
+    fmt.Println("Hello World") // Printing to the console usint the fmt package
+  } // Exiting the program
+  @end

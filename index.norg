@@ -1,0 +1,21 @@
+@document.meta
+	title: index
+	description: 
+	author: rj
+	categories: 
+	created: 2021-09-26
+	version: 0.1
+@end
+
+* This is the start of my journey in notes!
+  - I want to be more organized
+  - I want to keep a digital notebook
+
+  === 
+
+* Here you can find my Programming notes
+  - Programming [Index](:prog/programming.norg:*Languages)
+  - Golang
+  - Rust
+
+  ===

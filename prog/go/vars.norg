@@ -1,0 +1,43 @@
+@document.meta
+  title: vars
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-29
+  version: 0.1
+@end
+
+* Intro
+  - A value that can be changed by a program dring execution is called a variable
+  - `var name type`
+  @code go
+    package main
+    import "fmt"
+  
+    func main(){
+      var number int //Declare an int var
+      fmt.Println(number) // Print its value : 0
+      var decision bool //Declare boolean
+      fmt.Println(decision) // Print its value : false
+    }
+  @end
+  - Naming is camelCasing, unless exported then it needs to be in caps
+
+* Assigning Values
+  - Assignment is give using the = sign
+  - `var name type = value`
+  @code go
+    package main
+    import "fmt"
+  
+    func main(){
+      var number int = 5 //Declare and init int number with value 5
+      fmt.Println(number) // Prints 5 to the console
+      var decision bool = true //Declare and init dicision bool as true
+      fmt.Println(decision) // Print true to console
+  
+      number := 5 // Shorthand to declare and init a var
+      decision := true // Same can be done with other data types
+  
+      // The shorthand syntax can only be used inside functions
+  @end

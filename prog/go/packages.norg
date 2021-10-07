@@ -1,0 +1,60 @@
+@document.meta
+  title: packages
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-26
+  version: 0.1
+@end
+
+* Packages 
+  - The basic component of a Go program
+  Packages are a way to structure code. A program is constructed as a package and can use other packages
+  - Every Go file belongs to only one package
+  whereas on package can be made up of many Go files
+  - The package name must be lower-case and indicated on the first line
+  `package main`
+  - A standalone executtable belongs to main. Each Go application contains *one* main
+  - An application can consist of different packages
+  - All the code doesnt have to go in one file
+  - You can make a smaller number of files each starting with `package main`
+  - Any file compiled with a differnt name e.g., test, is stored in test.a 
+
+* Package Dependencies
+  - The packages and the files in them must e compiled in the correct order
+  - Package dependencies determine the order in which to build the package
+  - The package is compiled as a unit, and if changed needs to be recompild again
+
+* Import Keyword
+  - A Go program is created by linking packages together, using the `import` keyword
+  @code go
+  package main // Part of the main package
+  import "fmt" // Imports the "fmt" package and all its functions
+  @end
+  - To import multiple packages; factoring is used
+  @code go
+  import (
+    "fmt"
+    "os"
+  )
+  @end
+  - Factoring is calling the keyword once on multiple instances, it can also be usd on other keywords
+
+* Visibility
+  - Packages contain all other code objects apart from the blank identifier (_)
+  - Identifiers of code-objects in a package are unique so there wll be no naming conflicts
+    however the same identifier can be used in different packages. The package name qualifies a package to be different.
+
+* Visibility Rule
+  - Packages expose their code objects to code outside of the package according to the following rule:
+  -- When the [identifier](:basics.norg:*Identifiers) starts with an uppercase letter; Test1, then the 'object'
+    with this identifier is visible in code outside the package and is said to be exported. Identifiers that start 
+    with a lowercase leter are not visible outside the package, but they are visible and usable in the whole package.
+  - Importing only gives access to exported objects
+  -- `Object` in `test1` would be called with `pack1.Object`
+  - Packages also serve as namespaces
+  -- `Object` in `pack2` would be called with `pack2.Object`
+  -- So you can have the same object name within different packages
+  - You can also alias a package on import
+  -- `import fm "fmt"` should now be called with `fm` not `fmt`
+

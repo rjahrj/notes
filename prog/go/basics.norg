@@ -1,0 +1,74 @@
+@document.meta
+  title: basics
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-26
+  version: 0.1
+@end
+
+* Intro
+  This is the start of the journey into golang. 
+  These notes may be updated or archived based on learning method
+
+* Filenames
+  - Go source code is stored in .go files
+  - Multi names are seperated by underscores
+  - No spaces or special characters
+  
+* Keywords
+  - Go uses 25 keywords
+  @table
+    break | default | func | interface | select
+    case | defer | go | map | struct
+    chan | else | goto | package | switch
+    const | fallthrough | if | range | type 
+    continue | for | import | return | var
+  @end
+
+* Identifiers
+  - These are the identifiers that go uses
+  @table
+    append | false | iota | recover
+    bool | float32 | len | string
+    byte | float64 | make | true
+    cap | imag | new | uint
+    close | int | nil | uint8
+    complex | int8 | panic | uint16
+    complex64 | int16 | print | uint32
+    complex128 | int32 | println | uint64
+    copy  | int64 | real | uintptr
+  @end
+  - The Blank Identifier is an _
+   - It can be used in declarations or variable assignments; Its value will be discarded
+  - Anonymous are functions with no names
+  ===
+
+* Structure
+  - A program consists of keywords, constants, variables, operators, types, and functions
+  - There are also delimiters
+  ~~ Parentheses ()
+  ~~ Braces {}
+  ~~ Brackets []
+  ---
+  - There are also several punctuation characters used
+  ~~ .
+  ~~ ,
+  ~~ ;
+  ~~ :
+  ~~ ...
+    ---
+  - The code is structured in statements. Statements dont need to end with a ;
+  - If multiple statements are written on the same line then they must be separated with ; 
+
+* Comments
+  - Comments are used to explain your code
+  - // Is a single line comment
+  - /* */ is a multi line comment
+
+* Naming Things
+  - Clean, readable code and simplicity are the major goals of Go development
+  - Long names with mixed caps and underscores hinder readability.
+  - Names should not contain an indication of the package
+  - A method or function which returns an object is named as a noun.
+  - MixedCaps or mixedCaps are preferred over underscores for multiword names

@@ -1,0 +1,17 @@
+@document.meta
+  title: ideas
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-28
+  version: 0.1
+@end
+
+* A List of project ideas
+  - A note generator
+  ~~ Made in golang
+  ~~ Ask for the contents of the note
+  ~~ Output content into a `norg` file
+  ~~ Asks where to be saved
+  ---
+

@@ -1,0 +1,15 @@
+@document.meta
+	title: programming
+	description: 
+	author: rj
+	categories: 
+	created: 2021-09-26
+	version: 0.1
+@end
+
+* Intro
+    We are just starting out so dont mind the mess
+    Below you will find my notes on all the languages that I am learning
+
+* Languages
+    - [Golang](:go/index.norg:*Intro)

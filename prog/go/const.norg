@@ -1,0 +1,66 @@
+@document.meta
+  title: const
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-28
+  version: 0.1
+@end
+
+* Constants
+  - A value that cannot be changed is called a constant
+  - Only booleans, numbers(int, float, complex) or strings can be constants
+
+ ** Explicit and Implicit typing
+    - `const name type = value` (Explicit)
+    - You can omit the type because the compiler can derive type from the value (Implicit)
+    - There is a convention to name all consts in UPPERCASE
+
+ ** Typed and Untyped constants
+    - Constants declared explicitly are typed , while implicit consts are untyped
+    - A value derived from an untyed constant becomes typed when it is used within
+      a context that requires a typed value.
+      @code go
+        var n int
+        f(n + 5) // Untyped numeric constant "5" becomes typed as int, because n was int
+      @end
+
+ ** Compilation
+    - Consts must be evaluated at compile time
+    - Can be defined as a calculation, but still must be available at compile time
+    @code go
+      const C1 = 2/3 // This is okay
+    
+      const C2 = getNumber() // This is not okay; getNumber cant provide value at compile-time 
+    @end
+    - Error given above would be: `getNumber() used as value`
+
+ ** Multiple Assignments
+    - You can make multiple assignments in one line
+    @code go
+      const BEEF, TWO, C = "meat", 2, "veg" // 3 consts all untyped
+    
+      const MON, TUES, WED, THUR, FRI, SAT int = 1, 2, 3, 4, 5, 6 // Typed with int and given value
+    @end
+
+ ** Enumerations
+    - Listing of all elements of a set is called enumeration
+    @code go
+      const (
+        UNKNOWN = 0
+        FEMALE = 1
+        MALE = 2
+      )
+      const (    
+        UNKNOWN = iota
+        FEMALE = iota
+        MALE = iota
+      )
+      /* The first use of iota gives 0. Whenever iota used again on a new line, its value is incremented by 1. A new const
+        block or declaraton initializes iota back to 0 */
+      const (    
+        UNKNOWN = iota
+        FEMALE = 
+        MALE = 
+      )  // Is the same as above 
+    @end

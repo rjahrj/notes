@@ -1,0 +1,43 @@
+@document.meta
+  title: types
+  description: 
+  author: rj
+  categories: 
+  created: 2021-09-28
+  version: 0.1
+@end
+
+* Types
+  - Variables contain data, and data can be of different types.
+  - Go is statically typed, meaning the compiler must know the types of all the variables
+  @table
+    elementary(or primitive) | `int, float, bool, string`
+    ---
+    structured(or composite) | `struct, arrary, slice, map, channel`
+    ---
+    interfaces | They describe the behavior of a type
+  @end
+  - A structured type, which has no real value(yet), has a value `nil`
+    which is also the default value for thesetypes
+  - To declare a variable, the `var` keyword is used
+    `var var1 type1`
+  - Functions can also be of a type
+    `fun FuncName (a typea, b typeb) typeFunc`
+    Functions that have multiple returns getwrapped in () 
+    `fun FuncName (a typea, b typeb) (t1 type1, t2 type2)`
+  - You can also have user-defined data types
+
+* Conversions
+  - Sometimes a value needs to be converted into a value of another type called *type-casting*
+  - Go does not allow implicit conversion
+  - `valueOfTypeB = typeB(valueOfTypeA)`
+  @code go
+  package main
+  import "fmt"
+  
+  func main(){
+    var number float32 = 5.2 // Declaring a floating point variable
+    fmt.Println(number) // Print the value number = 5.2
+    fmt.Println(int(number)) // Type-cast number = 5
+  }
+  @end
