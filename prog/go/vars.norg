@@ -64,7 +64,7 @@ func main(){
   fmt.Println("New Value of number: ", number) //Prints 10
   fmt.Println("Bool is: ", dec)
 @end
-  - An identifier declared in ablock may be redeclared in an inner block, but
+  - An identifier declared in a block may be redeclared in an inner block, but
 then the redeclared variable takes priority and shadows the outer variable 
 with the same name
 

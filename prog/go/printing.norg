@@ -1,0 +1,35 @@
+@document.meta
+  title: printing
+  description: 
+  author: rj
+  categories: 
+  created: 2021-10-11
+  version: 0.1
+@end
+
+* Intro
+  - Here I will be showcasing my notes on all printing formats that I learn
+ ** Printf
+    - `fmt.Printf` is like `fmt.Println` just that it prints in a different format. 
+    It generally uses a format-string as its first argument.
+    - `func Printf(format string, list of variables to be printed)`
+    -- The `format string` can contain one or more format-specifiers
+      ~~~ `%d` specifies format for integral values
+      ~~~ `%s` specifies format for string values
+      ~~~ `%v` specifies the general default format
+
+ ** Example
+    @code go
+    package main
+    import "fmt"
+    
+    var number int = 5 //Global Scope
+    
+    func main(){
+      var dec bool = true //Local Scope
+      fmt.Printf("Original Value of number: %d\n", number) //Prints 5
+      number = 10 //Reassigned number 
+      fmt.Printf("New Value of number: %d\n", number) //Prints 10
+      fmt.Printf("Bool is: %t\n", dec)
+    }
+    @end
